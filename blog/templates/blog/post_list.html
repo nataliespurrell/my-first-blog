@@ -3,26 +3,15 @@
         <title>Will Tottenham ever win at Wembley?</title>
     </head>
     <body>
-        <div>
-            <h1><a href="">Will Tottenham ever win at Wembley?</a></h1>
-        </div>
+      <div>
+  <h1><a href="/">Girls in Tech Blog</a></h1>
+</div>
 
-        <div>
-
-        <div>
-            <p>Published: 24.09.2017, 12:00</p>
-            <h2><a href="">The Wembley curse strikes again</a></h2>
-            <p>Despite West Ham away being a bogey team over the last few years (it is typical of Spurs fans to blame
-our slightly less fortunate Eastern neighbours for failing to lift any major trophy in the last couple of years), and
-being down to ten men, Spurs managed a tight victory at the London Stadium, and the fact that Tottenham's away record
-is currently at 100%, whilst only being able to scrape a handful of points at Wembley tells far too many tales.</p>
-        </div>
-
-        <div>
-            <p>Published: 23.09.2017, 12:00</p>
-            <h2><a href="">I cannot believe I have managed to get this to work</a></h2>
-            <p>Incredibly, despite having managed to get absolutely everything wrong so far, I've been able to get this
-to work and I actually think I've been able to pick up HTML somewhat successfully.</p>
-        </div>
+{% for post in posts %}
+  <div>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div> {% endfor %}
     </body>
 </html>
